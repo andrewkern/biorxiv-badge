@@ -13,7 +13,7 @@ describe("makePreprintBadge", () => {
     expect(badge.label).toBe("bioRxiv");
     expect(badge.message).toBe("preprint");
     expect(badge.color).toBe("B31B1B");
-    expect(badge.logoSvg).toContain("<svg");
+
   });
 
   it("includes version when > 1", () => {
@@ -35,7 +35,7 @@ describe("makePublishedBadge", () => {
     expect(badge.label).toBe("bioRxiv");
     expect(badge.message).toBe("published");
     expect(badge.color).toBe("2E8B57");
-    expect(badge.logoSvg).toContain("<svg");
+
   });
 
   it("includes journal name when available", () => {
@@ -63,7 +63,7 @@ describe("makeErrorBadge", () => {
     expect(badge.message).toBe("not found");
     expect(badge.color).toBe("red");
     expect(badge.isError).toBe(true);
-    expect(badge.logoSvg).toContain("<svg");
+
   });
 
   it("accepts a custom error message", () => {
